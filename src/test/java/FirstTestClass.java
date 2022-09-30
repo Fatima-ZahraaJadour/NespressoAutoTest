@@ -5,7 +5,9 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class TestClass {
+
+//open selenium page in chrome driver :
+public class FirstTestClass {
     WebDriver driver;
     @BeforeTest
     public void testCase() {

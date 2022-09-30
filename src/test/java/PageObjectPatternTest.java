@@ -59,7 +59,7 @@ public class PageObjectPatternTest {
         Assert.assertEquals(qty,itemQuantity);
     }
     @Test(priority = 4)
-    public void checkout() {
+    public void checkoutAndNavigateToLoginPage() {
         cartPage.proceedToCheckout();
         loginPage = new LoginPage(driver);
         String title = loginPage.getLoginTitle();

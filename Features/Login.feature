@@ -1,4 +1,4 @@
-git Feature: Login Feature
+Feature: Login Feature
   Verify if user is able to Login in to the site
 
   Scenario Outline: Login with incorrect credentials,
