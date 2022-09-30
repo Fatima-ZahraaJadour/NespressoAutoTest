@@ -21,16 +21,12 @@ public class ProductsList {
 
     @FindBy(xpath = "//*[@id='ta-mini-basket__open']")
     WebElement showCartButton;
+    @FindBy(xpath = "//*[contains(@class, 'MiniBasketButton--not-empty')]")
+    WebElement showFullCartButton;
     @FindBy(xpath = "//*[id='ta-quantity-selector__custom-ok']")
     WebElement addToCartOkButton;
     @FindBy(xpath = "//*[id='ta-quantity-selector__custom-field']")
     WebElement addToCartInput;
-    /*
-    @FindBy(xpath = "//form[contains(@class,'list-item-form')]/descendant :: button[contains(@class, 'tocart')][1]" )
-    WebElement addToBagButton_INDONESIA;
-    @FindBy(xpath = "//form[contains(@class,'list-item-form')]/descendant :: span[@data-qtyitem='10']")
-    WebElement quantityItem;*/
-
 
     public ProductsList(WebDriver driver) {
         this.driver = driver;
@@ -62,6 +58,10 @@ public class ProductsList {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(showCartButton)).click();
         showCartButton.click();
+    }
+    public void showFullShoppingBag(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(showFullCartButton)).click();
     }
 
 }

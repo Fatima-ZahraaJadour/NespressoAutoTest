@@ -51,9 +51,8 @@ public class PageObjectPatternTest {
     }
     @Test(priority = 3)
     public void checkProductsInCart() {
-
         cartPage = new CartPage(driver);
-        productsList.showShoppingBag();
+        productsList.showFullShoppingBag();
         String productName = cartPage.getProductName();
         Assert.assertEquals(productName,itemName);
         String qty = cartPage.getProductQuantity(itemHeader);

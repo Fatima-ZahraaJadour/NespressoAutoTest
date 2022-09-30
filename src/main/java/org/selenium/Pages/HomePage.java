@@ -14,7 +14,7 @@ public class HomePage {
     WebElement coffeeElement;
     @FindBy(xpath = "//button[@id='_evidon-accept-button']")
     WebElement acceptCookiesButton;
-    @FindBy(xpath = "//a[contains(@href, 'order/capsules/original?name=nav&id=coffee-menu&creative=Buy-Original-Capsules&position=1-2')]")
+    @FindBy(xpath = "//a[contains(@href, 'capsules/original')  and contains(@class,'HeaderNavigationBarDropdown')]")
     WebElement originalCoffeeCatalogButton;
 
 
